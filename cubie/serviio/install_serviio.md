@@ -1,10 +1,16 @@
 # Preparations
 cd /usr/local/src/
+
 wget http://ffmpeg.org/releases/ffmpeg-2.8.5.tar.bz2
+
 tar xfvj ffmpeg-2.8.5.tar.bz2
+
 cd ffmpeg-2.8.5
+
 ./configure --enable-shared --prefix=/usr
+
 make -j3
+
 make install
 
 sudo apt-get install screen
