@@ -50,3 +50,7 @@ cd serviio-1.5.2/bin
 
 # Test
 >  Serviio should be up and running now!
+
+> Install samba
+
+apt-get install samba-common samba 
