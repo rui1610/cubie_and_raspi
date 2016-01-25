@@ -66,7 +66,10 @@ tar zxvf serviio-1.5.2-linux.tar.gz
 
 cd serviio-1.5.2/bin
 
-./serviio.sh
+sudo start serviio
+
+.serviio/bin/serviio-console.sh 
+
 
 >  Serviio should be up and running now!
 
