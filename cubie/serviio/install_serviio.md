@@ -1,4 +1,18 @@
-# Preparations
+# Install Webmin
+
+> On /etc/apt/sources.list add the following repository to the file
+
+deb http://download.webmin.com/download/repository sarge contrib
+
+wget http://www.webmin.com/jcameron-key.asc
+
+apt-key add jcameron-key.asc
+
+apt-get update
+
+apt-get install webmin
+
+# Preparations (install Java)
 cd /usr/local/src/
 
 wget http://ffmpeg.org/releases/ffmpeg-2.8.5.tar.bz2
@@ -54,3 +68,4 @@ cd serviio-1.5.2/bin
 > Install samba
 
 apt-get install samba-common samba 
+
