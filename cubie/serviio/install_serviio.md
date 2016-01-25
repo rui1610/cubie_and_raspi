@@ -41,6 +41,12 @@ apt-get update
 
 apt-get install oracle-java8-installer
 
+# Install samba
+
+apt-get install samba-common samba 
+
+# Install serviio
+
 > Add the serviio user
 sudo adduser serviio
 
@@ -48,7 +54,7 @@ sudo adduser serviio
 
 > Only the full name is necessary
 
-# Switch to new user
+## Switch to new user
 
 > Next is to connect to the cubietruck with the newly created serviio user and password
 
@@ -62,10 +68,5 @@ cd serviio-1.5.2/bin
 
 ./serviio.sh
 
-# Test
 >  Serviio should be up and running now!
-
-> Install samba
-
-apt-get install samba-common samba 
 
