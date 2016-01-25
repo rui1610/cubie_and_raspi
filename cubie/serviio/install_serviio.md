@@ -12,20 +12,11 @@ apt-get update
 
 apt-get install webmin
 
-# Preparations (install Java)
-cd /usr/local/src/
+# Preparations (install ffmepg and Java)
 
-wget http://ffmpeg.org/releases/ffmpeg-2.8.5.tar.bz2
+> ffmpeg is part of the libav-tools
 
-tar xfvj ffmpeg-2.8.5.tar.bz2
-
-cd ffmpeg-2.8.5
-
-./configure --enable-shared --prefix=/usr
-
-make -j3
-
-make install
+apt-get install libav-tools
 
 sudo apt-get install screen
 
