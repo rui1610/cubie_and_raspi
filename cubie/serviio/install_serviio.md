@@ -1,8 +1,8 @@
 # Install Webmin
 
-> On /etc/apt/sources.list add the following repository to the file
+> Add the webmin sources
 
-deb http://download.webmin.com/download/repository sarge contrib
+echo "deb http://download.webmin.com/download/repository sarge contrib" > /etc/apt/sources.list
 
 wget http://www.webmin.com/jcameron-key.asc
 
