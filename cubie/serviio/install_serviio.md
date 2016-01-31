@@ -1,7 +1,5 @@
 # Install Webmin
 
-> Add the webmin sources
-
 echo "deb http://download.webmin.com/download/repository sarge contrib" > /etc/apt/sources.list
 
 wget http://www.webmin.com/jcameron-key.asc
@@ -12,15 +10,7 @@ apt-get update
 
 apt-get install webmin
 
-# Preparations (install ffmepg and Java)
-
-> ffmpeg is part of the libav-tools
-
-apt-get install libav-tools
-
-sudo apt-get install screen
-
-> Now install Java 8 (pre-requisite for serviio)
+# Now install Java 8 (pre-requisite for serviio)
 
 echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" > /etc/apt/sources.list.d/webupd8team-java.list
 
@@ -31,6 +21,16 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
 apt-get update
 
 apt-get install oracle-java8-installer
+
+# Install ffmepg and other libs
+apt-get install build-essential libmp3lame-dev libvorbis-dev libtheora-dev libspeex-dev yasm pkg-config libfaac-dev libopenjpeg-dev libx264-dev libass-dev
+
+wget http://ffmpeg.org/releases/ffmpeg-2.8.tar.gz
+
+./configure --enable-gpl --enable-postproc --enable-swscale --enable-avfilter --enable-libmp3lame --enable-libvorbis --enable-libtheora --enable-libx264 --enable-libspeex --enable-shared --enable-pthreads --enable-libopenjpeg --enable-libfaac --enable-nonfree --enable-libass
+make
+
+make install
 
 # Install samba
 
@@ -45,22 +45,16 @@ sudo adduser serviio
 
 > Only the full name is necessary
 
-## Switch to new user
-
 > Next is to connect to the cubietruck with the newly created serviio user and password
 
 su - serviio
 
-wget http://download.serviio.org/releases/serviio-1.5.2-linux.tar.gz
+wget http://download.serviio.org/releases/serviio-1.6-linux.tar.gz && tar xzf serviio-1.6-linux.tar.gz && mv serviio-1.6 /usr/local/serviio
 
-tar zxvf serviio-1.5.2-linux.tar.gz
+useradd -s /usr/sbin/nologin -d /usr/local/serviio -r -M -U serviio
 
-cd serviio-1.5.2/bin
+chown -R serviio:serviio /usr/local/serviio
 
-sudo start serviio
+nano /etc/init.d/serviio
 
-.serviio/bin/serviio-console.sh 
-
-
->  Serviio should be up and running now!
 
