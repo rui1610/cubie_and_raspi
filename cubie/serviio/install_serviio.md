@@ -8,7 +8,7 @@ apt-key add jcameron-key.asc
 
 apt-get update
 
-apt-get install webmin
+apt-get -y install webmin
 
 # Now install Java 8 (pre-requisite for serviio)
 
@@ -20,7 +20,7 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
 
 apt-get update
 
-apt-get install oracle-java8-installer
+apt-get -y install oracle-java8-installer
 
 # Install ffmepg and other libs
 apt-get install build-essential libmp3lame-dev libvorbis-dev libtheora-dev libspeex-dev yasm pkg-config libfaac-dev libopenjpeg-dev libx264-dev libass-dev
@@ -34,7 +34,7 @@ make install
 
 # Install samba
 
-apt-get install samba-common samba 
+apt-get -y install samba-common samba 
 
 # Install serviio
 
