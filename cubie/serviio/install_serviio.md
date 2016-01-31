@@ -47,6 +47,8 @@ sudo adduser serviio
 
 > Next is to connect to the cubietruck with the newly created serviio user and password
 
+> Most og these instructions come from http://forums.openmediavault.org/index.php/Thread/3036-Serviio-Install-Guide/?pageNo=1&s=9d7f4a1286ee9e5b9014fd7d5a0be6d561721da4
+
 wget http://download.serviio.org/releases/serviio-1.6-linux.tar.gz && tar xzf serviio-1.6-linux.tar.gz && mv serviio-1.6 /usr/local/serviio
 
 useradd -s /usr/sbin/nologin -d /usr/bin/serviio -r -M -U serviio
