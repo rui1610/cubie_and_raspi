@@ -27,10 +27,7 @@ apt-get -y install build-essential libmp3lame-dev libvorbis-dev libtheora-dev li
 
 wget http://ffmpeg.org/releases/ffmpeg-2.8.tar.gz
 
-./configure --enable-gpl --enable-postproc --enable-swscale --enable-avfilter --enable-libmp3lame --enable-libvorbis --enable-libtheora --enable-libx264 --enable-libspeex --enable-shared --enable-pthreads --enable-libopenjpeg --enable-libfaac --enable-nonfree --enable-libass
-make
-
-make install
+./configure --enable-gpl --enable-postproc --enable-swscale --enable-avfilter --enable-libmp3lame --enable-libvorbis --enable-libtheora --enable-libx264 --enable-libspeex --enable-shared --enable-pthreads --enable-libopenjpeg --enable-libfaac --enable-nonfree --enable-libass && make && make install
 
 # Install samba
 
