@@ -23,7 +23,7 @@ apt-get update
 apt-get -y install oracle-java8-installer
 
 # Install ffmepg and other libs
-apt-get install build-essential libmp3lame-dev libvorbis-dev libtheora-dev libspeex-dev yasm pkg-config libfaac-dev libopenjpeg-dev libx264-dev libass-dev
+apt-get -y install build-essential libmp3lame-dev libvorbis-dev libtheora-dev libspeex-dev yasm pkg-config libfaac-dev libopenjpeg-dev libx264-dev libass-dev
 
 wget http://ffmpeg.org/releases/ffmpeg-2.8.tar.gz
 
